@@ -44,7 +44,7 @@ export const ProductCard = () => {
                        5ml
                    </ToggleGroupItem>
                </ToggleGroup>
-               <div className="grid grid-cols-1 lg:grid-cols-[1fr,32px] gap-x-6">
+               <div className="grid grid-cols-[1fr,32px] gap-x-2 lg:gap-x-6">
                    <Button variant="outline">
                        Add to cart
                    </Button>

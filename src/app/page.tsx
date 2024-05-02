@@ -44,7 +44,7 @@ export default function Home(){
                           maxSize={1.4}
                           particleDensity={100}
                           className="w-full h-full"
-                          particleColor="#FAFA33"
+                          particleColor="#FF007F"
                       />
                     </div>
                     <Image
