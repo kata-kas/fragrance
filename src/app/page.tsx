@@ -3,6 +3,9 @@ import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import {ChevronRightIcon} from "@radix-ui/react-icons";
 import {FlowerIcon} from "@/components/icons/flower-icon";
 import {MobileMenu} from "@/components/mobile-menu";
+import {ProductCard} from "@/components/product-card";
+import {SparklesCore} from "@/components/sparkles";
+import Image from "next/image";
 
 export default function Home(){
   return (
@@ -33,13 +36,24 @@ export default function Home(){
             <section className="w-full py-12 md:py-24 lg:py-32">
               <div className="container px-4 md:px-6">
                 <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-                  <img
-                      alt="Perfume Bottle"
-                      className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
-                      height="550"
-                      src="/fragrance.jpeg"
-                      width="550"
-                  />
+                    <div className="w-full absolute inset-0 h-screen">
+                      <SparklesCore
+                          id="tsparticlesfullpage"
+                          background="transparent"
+                          minSize={0.6}
+                          maxSize={1.4}
+                          particleDensity={100}
+                          className="w-full h-full"
+                          particleColor="#FAFA33"
+                      />
+                    </div>
+                    <Image
+                        alt="Perfume Bottle"
+                        className="relative z-20 mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
+                        height="550"
+                        src="/fragrance.jpeg"
+                        width="550"
+                    />
                   <div className="flex flex-col justify-center space-y-4">
                     <div className="space-y-2">
                       <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -68,74 +82,14 @@ export default function Home(){
                   <div className="space-y-2">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Featured Fragrances</h2>
                     <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                      Discover our curated selection of hand-decanted, artisanal fragrances.
+                    Discover our curated selection of hand-decanted, artisanal fragrances.
                     </p>
                   </div>
                 </div>
                 <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
-                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
-                    <Link className="absolute inset-0 z-10" href="#">
-                      <span className="sr-only">View</span>
-                    </Link>
-                    <img
-                        alt="Floral Bouquet"
-                        className="object-cover w-full h-64"
-                        height={400}
-                        src="/floral_bouquet.jpeg"
-                        style={{
-                          aspectRatio: "400/400",
-                          objectFit: "cover",
-                        }}
-                        width={400}
-                    />
-                    <div className="bg-white p-4 dark:bg-gray-950">
-                      <h3 className="font-bold text-xl">Floral Bouquet</h3>
-                      <p className="text-sm text-gray-500">Floral, Citrus</p>
-                      <h4 className="font-semibold text-lg md:text-xl">$59.99</h4>
-                    </div>
-                  </div>
-                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
-                    <Link className="absolute inset-0 z-10" href="#">
-                      <span className="sr-only">View</span>
-                    </Link>
-                    <img
-                        alt="Woody Escape"
-                        className="object-cover w-full h-64"
-                        height={400}
-                        src="/woody_escape.jpeg"
-                        style={{
-                          aspectRatio: "400/400",
-                          objectFit: "cover",
-                        }}
-                        width={400}
-                    />
-                    <div className="bg-white p-4 dark:bg-gray-950">
-                      <h3 className="font-bold text-xl">Woody Escape</h3>
-                      <p className="text-sm text-gray-500">Woody, Spicy</p>
-                      <h4 className="font-semibold text-lg md:text-xl">$69.99</h4>
-                    </div>
-                  </div>
-                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
-                    <Link className="absolute inset-0 z-10" href="#">
-                      <span className="sr-only">View</span>
-                    </Link>
-                    <img
-                        alt="Citrus Breeze"
-                        className="object-cover w-full h-64"
-                        height={400}
-                        src="/citrus_breeze.jpeg"
-                        style={{
-                          aspectRatio: "400/400",
-                          objectFit: "cover",
-                        }}
-                        width={400}
-                    />
-                    <div className="bg-white p-4 dark:bg-gray-950">
-                      <h3 className="font-bold text-xl">Citrus Breeze</h3>
-                      <p className="text-sm text-gray-500">Citrus, Fresh</p>
-                      <h4 className="font-semibold text-lg md:text-xl">$49.99</h4>
-                    </div>
-                  </div>
+                  <ProductCard />
+                  <ProductCard />
+                  <ProductCard />
                 </div>
               </div>
             </section>
