@@ -4,7 +4,6 @@ import {ChevronRightIcon} from "@radix-ui/react-icons";
 import {FlowerIcon} from "@/components/icons/flower-icon";
 import {MobileMenu} from "@/components/mobile-menu";
 import {ProductCard} from "@/components/product-card";
-import {SparklesCore} from "@/components/sparkles";
 import Image from "next/image";
 
 export default function Home(){
@@ -36,24 +35,13 @@ export default function Home(){
             <section className="w-full py-12 md:py-24 lg:py-32">
               <div className="container px-4 md:px-6">
                 <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-                    <div className="w-full absolute inset-0 h-screen">
-                      <SparklesCore
-                          id="tsparticlesfullpage"
-                          background="transparent"
-                          minSize={0.6}
-                          maxSize={1.4}
-                          particleDensity={100}
-                          className="w-full h-full"
-                          particleColor="#FF007F"
-                      />
-                    </div>
-                    <Image
-                        alt="Perfume Bottle"
-                        className="relative z-20 mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
-                        height="550"
-                        src="/fragrance.jpeg"
-                        width="550"
-                    />
+                  <Image
+                      alt="Perfume Bottle"
+                      className="relative z-20 mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
+                      height="550"
+                      src="/fragrance.jpeg"
+                      width="550"
+                  />
                   <div className="flex flex-col justify-center space-y-4">
                     <div className="space-y-2">
                       <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -82,7 +70,7 @@ export default function Home(){
                   <div className="space-y-2">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Featured Fragrances</h2>
                     <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    Discover our curated selection of hand-decanted, artisanal fragrances.
+                      Discover our curated selection of hand-decanted, artisanal fragrances.
                     </p>
                   </div>
                 </div>
